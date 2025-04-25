@@ -1,7 +1,3 @@
-Here’s a polished, professional, and well-structured **README.md** for **ofumangen** with clear sections, better formatting, and improved readability:
-
----
-
 # 🚀 ofumangen
 
 **ofumangen** is a **TypeScript-powered CLI tool** that automates the generation of Express.js backend code. Quickly scaffold **models, controllers, and routes** with best practices in mind, reducing boilerplate and speeding up development.
@@ -40,13 +36,13 @@ yarn add --dev ofumangen
 
 ---
 
-⚠️ Required Development Dependency
+## ⚠️ **Required Development Dependency**
+
 Since this project uses TypeScript with Node.js built-in modules, you must install Node.js types if you're compiling TypeScript manually or using it in dev mode:
 
-bash
-Copy
-Edit
+```bash
 npm install --save-dev @types/node
+```
 
 ## 🛠 Usage
 
