@@ -11,6 +11,13 @@ Here’s a polished, professional, and well-structured **README.md** for **ofuma
 ✔ **Modular & customizable templates**  
 ✔ **Zero-config defaults**
 
+> **Name Meaning**  
+> The name **Ofumangen** comes from Afaan Oromo:
+>
+> - **"Ofumaan"** means "by itself" or "automatically"
+> - **"gen"** is a short form of **generator**  
+>   Together, **Ofumangen** means "self-generator".
+
 ---
 
 ## 📦 Installation
@@ -33,22 +40,30 @@ yarn add --dev ofumangen
 
 ---
 
+⚠️ Required Development Dependency
+Since this project uses TypeScript with Node.js built-in modules, you must install Node.js types if you're compiling TypeScript manually or using it in dev mode:
+
+bash
+Copy
+Edit
+npm install --save-dev @types/node
+
 ## 🛠 Usage
 
 ### **1. Generate a Model**
 
 Choose your database type:
 
-| Database       | Command                                         |
-| -------------- | ----------------------------------------------- |
-| **MongoDB**    | `ofumangen generate model mongo <ModelName>`    |
-| **MySQL**      | `ofumangen generate model mysql <ModelName>`    |
-| **PostgreSQL** | `ofumangen generate model postgres <ModelName>` |
+| Database       | Command                                             |
+| -------------- | --------------------------------------------------- |
+| **MongoDB**    | `npx ofumangen generate model mongo <ModelName>`    |
+| **MySQL**      | `npx ofumangen generate model mysql <ModelName>`    |
+| **PostgreSQL** | `npx ofumangen generate model postgres <ModelName>` |
 
 **Example**:
 
 ```bash
-ofumangen generate model mongo User
+npx ofumangen generate model mongo User
 ```
 
 ---
@@ -56,13 +71,13 @@ ofumangen generate model mongo User
 ### **2. Generate a Controller**
 
 ```bash
-ofumangen generate controller <ModelName>
+npx ofumangen generate controller <ModelName>
 ```
 
 **Example**:
 
 ```bash
-ofumangen generate controller User
+npx ofumangen generate controller User
 ```
 
 ---
@@ -70,13 +85,13 @@ ofumangen generate controller User
 ### **3. Generate a Route**
 
 ```bash
-ofumangen generate route <ModelName>
+npx ofumangen generate route <ModelName>
 ```
 
 **Example**:
 
 ```bash
-ofumangen generate route User
+npx ofumangen generate route User
 ```
 
 ---
@@ -106,7 +121,7 @@ app.listen(3000, () => {
 ## 📂 Generated File Structure
 
 ```
-src/
+/
 ├── models/
 │   └── User.ts          # Mongoose/Sequelize model
 ├── controllers/
