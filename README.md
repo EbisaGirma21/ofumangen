@@ -21,7 +21,7 @@
 ### **Globally (Recommended for CLI Usage)**
 
 ```bash
-npm install -g ofumangen
+npm install ofumangen
 # or
 yarn global add ofumangen
 ```

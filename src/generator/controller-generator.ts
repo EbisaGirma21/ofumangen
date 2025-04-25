@@ -6,6 +6,6 @@ export function generateController(name: string) {
     __dirname,
     "../../templates/controller.template.ts"
   );
-  const outputPath = `/controllers/${name}Controller.ts`;
+  const outputPath = `./controllers/${name}Controller.ts`;
   writeFileFromTemplate(templatePath, outputPath, { ModelName: name });
 }

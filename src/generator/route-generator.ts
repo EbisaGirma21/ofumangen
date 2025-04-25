@@ -8,6 +8,6 @@ export function generateRoute(name: string) {
     __dirname,
     "../../templates/route.template.ts"
   );
-  const outputPath = `/routes/${name.toLowerCase()}.ts`;
+  const outputPath = `./routes/${name.toLowerCase()}.ts`;
   writeFileFromTemplate(templatePath, outputPath, { ModelName: name });
 }

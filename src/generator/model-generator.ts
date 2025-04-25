@@ -32,7 +32,7 @@ export function generateModel(type: string, name: string) {
   }
 
   // Set the output path for the generated model file
-  const outputPath = path.resolve(`/models/${name}.ts`);
+  const outputPath = path.resolve(`./models/${name}.ts`);
 
   // Call the function to generate the model file from the template
   writeFileFromTemplate(templatePath, outputPath, { ModelName: name });
