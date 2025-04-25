@@ -1,11 +1,11 @@
 import path from "path";
 import { writeFileFromTemplate } from "../utils/file-writer";
 
-export function generateModel(name: string) {
-  const modelType = process.argv[3]; // mongo, mysql, postgres
+export function generateModel(type: string, name: string) {
   let templatePath = "";
 
-  switch (modelType) {
+  // Use the model type to select the appropriate template
+  switch (type) {
     case "mongo":
       templatePath = path.resolve(
         __dirname,
@@ -25,10 +25,15 @@ export function generateModel(name: string) {
       );
       break;
     default:
-      console.log("Invalid model type");
+      console.log(
+        "Invalid model type. Please use 'mongo', 'mysql', or 'postgres'."
+      );
       return;
   }
 
-  const outputPath = `src/models/${name}.ts`;
+  // Set the output path for the generated model file
+  const outputPath = path.resolve(`src/models/${name}.ts`);
+
+  // Call the function to generate the model file from the template
   writeFileFromTemplate(templatePath, outputPath, { ModelName: name });
 }

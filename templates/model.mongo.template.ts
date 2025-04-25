@@ -10,6 +10,6 @@ const {{ModelName}}Schema = new Schema<I{{ModelName}}>({
   email: { type: String, required: true },
 });
 
-const {{ModelName}}Model = model<I{{ModelName}}>('{{ModelName}}', {{ModelName}}Schema);
+const {{ModelName}} = model<I{{ModelName}}>('{{ModelName}}', {{ModelName}}Schema);
 
-export { {{ModelName}}Model };
+export { {{ModelName}} };
