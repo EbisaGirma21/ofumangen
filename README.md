@@ -20,15 +20,21 @@
 
 Since this project uses TypeScript with Node.js built-in modules, you must install Node.js types if you're compiling TypeScript manually or using it in dev mode:
 
+Before running the project, make sure you have TypeScript and ts-node installed globally:
+
 ```bash
 npm install -g ts-node typescript
 ```
 
-and
+> This allows you to run TypeScript files directly from the terminal using ts-node.
+
+To ensure proper typing for Node.js built-in modules (like fs, path, etc.), install the type definitions:
 
 ```bash
 npm install --save-dev @types/node
 ```
+
+> This is required for TypeScript to understand Node.js-specific globals and APIs.
 
 ## 📦 Installation
 
@@ -149,7 +155,7 @@ npm run dev
 ## 📂 Generated File Structure
 
 ```
-/
+./
 ├── models/
 │   └── User.ts          # Mongoose/Sequelize model
 ├── controllers/
