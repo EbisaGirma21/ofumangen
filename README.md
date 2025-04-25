@@ -130,8 +130,11 @@ app.listen(3000, () => {
 ```
 
 ```bash
+npm install mongoose dotenv
 npm install -D @types/mongoose
 ```
+
+> @types/mongoose helps TypeScript understand Mongoose types.
 
 ```ts
 // config/db.ts
@@ -149,6 +152,18 @@ const connectDB = async () => {
 
 export default connectDB;
 ```
+
+Add the following to package.json
+
+```json
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only ./app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+```
+
+Then run:
 
 ```bash
 npm run dev
