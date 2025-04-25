@@ -40,7 +40,11 @@ npm install --save-dev @types/node
 
 ```bash
 npm install ofumangen
-# or
+```
+
+> or
+
+```bash
 yarn add  ofumangen
 ```
 
