@@ -161,11 +161,6 @@ npx ofumangen generate model mongo Product
 
 ---
 
-This version:  
-✅ **Uses clear, concise language**  
-✅ **Includes a command table for better readability**  
-✅ **Highlights key features upfront**  
-✅ **Provides a visual file structure**  
-✅ **Encourages customization**
+## License
 
-Let me know if you'd like any refinements! 🚀
+This project is licensed under the MIT License © 2025 [Ebisa Girma](https://github.com/EbisaGirma21)

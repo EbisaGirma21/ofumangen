@@ -1,6 +1,6 @@
 {
   "name": "ofumangen",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "**ofumangen** is a TypeScript-powered code generator for [Express.js](https://expressjs.com/). It helps developers scaffold boilerplate code for models, routes, controllers, and more — making backend development faster, cleaner, and more consistent.",
   "main": "src/index.js",
   "bin": {
