@@ -143,7 +143,7 @@ Override default templates by placing custom files in:
 
 ## 📜 License
 
-MIT © [Your Name]
+MIT © Ebisa Girma
 
 ---
 
