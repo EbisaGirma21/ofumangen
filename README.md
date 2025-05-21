@@ -3,16 +3,17 @@
 **ofumangen** is a **TypeScript-powered CLI tool** that automates the generation of Express.js backend code. Quickly scaffold **models, controllers, and routes** with best practices in mind, reducing boilerplate and speeding up development.
 
 ✔ **TypeScript-first**  
-✔ **Supports MongoDB (Mongoose) & SQL (Sequelize)**  
+✔ **Supports MongoDB (Mongoose)**  
 ✔ **Modular & customizable templates**  
 ✔ **Zero-config defaults**
 
-> **Name Meaning**  
+<!--
+> **Name Meaning**
 > The name **Ofumangen** comes from Afaan Oromo:
 >
 > - **"Ofumaan"** means "by itself" or "automatically"
-> - **"gen"** is a short form of **generator**  
->   Together, **Ofumangen** means "self-generator".
+> - **"gen"** is a short form of **generator**
+>   Together, **Ofumangen** means "self-generator". -->
 
 ---
 
@@ -52,48 +53,18 @@ yarn add  ofumangen
 
 ## 🛠 Usage
 
-### **1. Generate a Model**
+### **Generate a Model Controller and Route**
 
 Choose your database type:
 
-| Database       | Command                                             |
-| -------------- | --------------------------------------------------- |
-| **MongoDB**    | `npx ofumangen generate model mongo <ModelName>`    |
-| **MySQL**      | `npx ofumangen generate model mysql <ModelName>`    |
-| **PostgreSQL** | `npx ofumangen generate model postgres <ModelName>` |
+| Database    | Command                      |
+| ----------- | ---------------------------- |
+| **MongoDB** | `npx ofumangen  <ModelName>` |
 
 **Example**:
 
 ```bash
-npx ofumangen generate model mongo User
-```
-
----
-
-### **2. Generate a Controller**
-
-```bash
-npx ofumangen generate controller <ModelName>
-```
-
-**Example**:
-
-```bash
-npx ofumangen generate controller User
-```
-
----
-
-### **3. Generate a Route**
-
-```bash
-npx ofumangen generate route <ModelName>
-```
-
-**Example**:
-
-```bash
-npx ofumangen generate route User
+npx ofumangen  User
 ```
 
 ---
