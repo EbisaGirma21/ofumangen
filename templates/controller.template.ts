@@ -1,4 +1,9 @@
 import { Request, Response } from 'express';
+import jwt from 'jsonwebtoken';
+
+const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret';
+
+
 import { {{ModelName}} } from '../models/{{ModelName}}';
 
 export const {{ModelName}}Controller = {
@@ -103,3 +108,38 @@ export const {{ModelName}}Controller = {
     }
   },
 };
+// Register user
+register: async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { name, email, password } = req.body;
+    const existing = await {{ModelName}}.findOne({ email });
+    if (existing) {
+      res.status(400).json({ message: 'Email already in use' });
+      return;
+    }
+    const user = await {{ModelName}}.create({ name, email, password });
+    res.status(201).json({ message: 'User registered', user });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+},
+
+// Login user
+login: async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { email, password } = req.body;
+    const user = await {{ModelName}}.findOne({ email });
+    if (!user || !(await user.comparePassword(password))) {
+      res.status(401).json({ message: 'Invalid email or password' });
+      return;
+    }
+
+    const token = jwt.sign({ id: user._id, email: user.email }, JWT_SECRET, {
+      expiresIn: '1d',
+    });
+
+    res.status(200).json({ message: 'Login successful', token });
+  } catch (error: any) {
+    res.status(500).json({ error: error.message });
+  }
+},

@@ -3,6 +3,7 @@
 import { generateModel } from "./generator/model-generator";
 import { generateRoute } from "./generator/route-generator";
 import { generateController } from "./generator/controller-generator";
+import { generateAuthMiddleware } from "./generator/middleware-generator";
 
 // Get the model name from CLI args
 const args = process.argv.slice(2);
@@ -19,6 +20,7 @@ try {
   generateModel(name);
   generateController(name);
   generateRoute(name);
+  generateAuthMiddleware();
 
   console.log(
     `✔ Successfully generated model, controller, and route for "${name}".`
